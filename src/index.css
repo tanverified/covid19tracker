@@ -1,13 +1,132 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main_container {
+  height: 100vh;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 5px 10px 15px 10px;
+  color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px  #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px  #262626, 0 6px 0 #242424, 0 7px 0 #222,
+    0 8px 0 #202020, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1100px;
+}
+.container .card {
+  height: 200px;
+  width: 320px;
+  margin: 20px;
+  color: white;
+  padding: 0px 0px 40px 0px;
+  border-radius: 25px;
+  text-shadow: 2px 2px 5px #000000;
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 1),
+    6px 6px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out, transform 0.35s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 11px 11px 0 rgba(0, 0, 0, 0.16);
+  transform: translateY(-5px);
+}
+.card_header {
+  width: 100%;
+  height: 50px;
+  font-size: 2em;
+  text-align: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.card_content {
+  font-size: 3em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card:nth-child(1),
+.card:nth-child(1)::before {
+  background: linear-gradient(180deg, #2703f4, #5fb4fa);
+}
+.card:nth-child(2),
+.card:nth-child(2)::before {
+  background: linear-gradient(180deg, #2ecc71, #48da96);
+}
+.card:nth-child(3),
+.card:nth-child(3)::before {
+  background: linear-gradient(180deg, #795548, #a98274);
+}
+.card:nth-child(4),
+.card:nth-child(4)::before {
+  background: linear-gradient(180deg, #d32f2f, #ff6659);
+}
+.card:nth-child(5),
+.card:nth-child(5)::before {
+  background: linear-gradient(180deg, #311b92, #6746c3);
+}
+.card:nth-child(6),
+.card:nth-child(6)::before {
+  background: linear-gradient(180deg, #8c9900, #c0ca33);
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 688px) {
+  .header {
+    width: 100%;
+  }
+  .header h1,
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .container {
+    width: 100%;
+  }
+  .container .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+  .header h1,
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .container {
+    width: 100%;
+  }
+  .container .card {
+    width: 90%;
+  }
 }
